@@ -6,6 +6,6 @@
   "scripts": {
     "build:bike-store": "npm --prefix bike-store run build",
     "build:car-store": "npm --prefix car-store run build",
-    "all-the-things": "npm --prefix bike-store run build && npm --prefix car-store run build"
+    "all-the-things": "cd bike-store && npm i && npm run build && cd ../car-store && npm i && npm run build"
   }
 }
