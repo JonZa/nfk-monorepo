@@ -1,11 +1,11 @@
 {
-  "name": "simple-monorepo",
+  "name": "nfk-monorepo",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:bike-store": "npm --prefix bike-store run build",
-    "build:car-store": "npm --prefix car-store run build",
-    "all-the-things": "npm --prefix bike-store run build && npm --prefix car-store run build"
+    "react-next-build": "npm run build",
+    "vue-nuxt-build": "npm run build",
+    "all-the-things": "cd react-next && npm i && npm run build && cd ../vue-nuxt && npm i && npm run build"
   }
 }
