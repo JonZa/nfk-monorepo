@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate --modern",
     "start": "nuxt start"
   },
   "dependencies": {
