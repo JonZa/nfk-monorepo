@@ -1,0 +1,7 @@
+[[redirects]]
+  from = "/vue/*"
+  to = "/vue-nuxt/dist/:splat"
+  
+[[redirects]]
+  from = "/*"
+  to = "/react-next/out/:splat"

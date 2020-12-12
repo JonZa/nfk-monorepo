@@ -10,6 +10,7 @@
 
 # production
 /.nuxt
+/dist
 
 # misc
 .DS_Store

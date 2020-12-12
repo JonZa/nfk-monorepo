@@ -1,9 +1,0 @@
-[
-  {
-    "name": "index",
-    "path": "/",
-    "component": "/home/jon/dev/nfk-monorepo/vue-nuxt/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_270ddb63"
-  }
-]
