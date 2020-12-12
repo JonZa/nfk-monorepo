@@ -4,8 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "react-next-build": "npm run build",
-    "vue-nuxt-build": "npm run build",
-    "all-the-things": "cd react-next && npm i && npm run generate && cd ../vue-nuxt && npm i && npm run generate"
+    "stuff": "cd react-next && npm i && npm run generate && mv out react && mv react ../nfk.st/ && cd ../vue-nuxt && npm i && npm run generate && mv dist vue && mv vue ../nfk.st/"
   }
 }
