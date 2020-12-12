@@ -9,7 +9,8 @@
 /coverage
 
 # production
-/build
+/nfk.st/react
+/nfk.st/vue
 
 # misc
 .DS_Store
