@@ -17,6 +17,7 @@ export default {
 		 */
 		extend(config) {
 			config.resolve.alias['$shared'] = '../../shared';
+			config.output.publicPath = './_nuxt/'
 		}
 	}
 };
