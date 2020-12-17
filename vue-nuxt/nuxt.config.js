@@ -19,5 +19,8 @@ export default {
 			config.resolve.alias['$shared'] = path.join(__dirname, '../shared');
 			if (!isDev) config.output.publicPath = './_nuxt/';
 		}
+	},
+	router: {
+	  base: '/vue/'
 	}
 };
