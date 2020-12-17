@@ -15,9 +15,9 @@ export default {
 		/*
 		 ** You can extend webpack config here
 		 */
-		extend(config, { isDev, isClient }) {
+		extend(config, { isDev }) {
 			config.resolve.alias['$shared'] = path.join(__dirname, '../shared');
-			if (isClient) config.output.publicPath = './_nuxt/';
+			if (!isDev) config.output.publicPath = './_nuxt/';
 		}
 	}
 };
