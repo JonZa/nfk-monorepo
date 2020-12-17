@@ -1,0 +1,40 @@
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover, a.active';
+
+@mixin background-image($file, $type, $width, $height, $start: null, $finish: null, $direction: null) {
+	$gradient: '';
+	@if $start {
+		$gradient: 'linear-gradient(#{$direction}, #{$start}, #{$finish}), ';
+	}
+	background-image: #{$gradient} url($file+'.'+$type);
+	background-size: $width $height;
+	@include media('retina2x') {
+		& {
+			background-image: #{$gradient} url($file+'@2x.'+$type);
+		}
+	}
+}
+
+@keyframes glitch-anim {
+	$steps: 10;
+	@for $i from 0 through $steps {
+		0% {
+			clip: rect(0, 0, 0, 0);
+		}
+		59% {
+			clip: rect(0, 0, 0, 0);
+		}
+		#{percentage(0.6 + $i*(0.3/$steps))} {
+			left: -10 + random(20) + px;
+			top: random(25) + px;
+			clip: rect(random(75) + px, 9999px, random(125) + px, 0);
+		}
+	}
+}
+
+@mixin desktopShape {
+	width: 100%;
+	max-width: calc(100vw - 100px);
+	height: calc((100vw - 100px) / 16 * 9);
+	max-height: calc(100vh - 100px);
+}
