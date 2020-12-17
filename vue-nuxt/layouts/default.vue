@@ -48,17 +48,17 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/variables.scss';
-@import '@/assets/mixins.scss';
-@import '@/assets/include-media.scss';
+@import '~$shared/sass/shared/variables.scss';
+@import '~$shared/sass/shared/mixins.scss';
+@import '~$shared/sass/shared/include-media.scss';
 /* nunito-900 - latin */
 @font-face {
 	font-family: 'Nunito';
 	font-style: normal;
 	font-weight: 900;
 	font-display: swap;
-	src: url('~@/static/fonts/nunito-v16-latin-900.eot'); /* IE9 Compat Modes */
-	src: local(''), url('~@/static/fonts/nunito-v16-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('~@/static/fonts/nunito-v16-latin-900.woff2') format('woff2'), /* Super Modern Browsers */ url('~@/static/fonts/nunito-v16-latin-900.woff') format('woff'), /* Modern Browsers */ url('~@/static/fonts/nunito-v16-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */ url('~@/static/fonts/nunito-v16-latin-900.svg#Nunito') format('svg'); /* Legacy iOS */
+	src: url('~$shared/fonts/nunito-v16-latin-900.eot'); /* IE9 Compat Modes */
+	src: local(''), url('~$shared/fonts/nunito-v16-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('~$shared/fonts/nunito-v16-latin-900.woff2') format('woff2'), /* Super Modern Browsers */ url('~$shared/fonts/nunito-v16-latin-900.woff') format('woff'), /* Modern Browsers */ url('~$shared/fonts/nunito-v16-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */ url('~$shared/fonts/nunito-v16-latin-900.svg#Nunito') format('svg'); /* Legacy iOS */
 }
 /* alegreya-regular - latin */
 @font-face {
@@ -66,8 +66,8 @@ export default {
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url('~@/static/fonts/alegreya-v16-latin-regular.eot'); /* IE9 Compat Modes */
-	src: local(''), url('~@/static/fonts/alegreya-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('~@/static/fonts/alegreya-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */ url('~@/static/fonts/alegreya-v16-latin-regular.woff') format('woff'), /* Modern Browsers */ url('~@/static/fonts/alegreya-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('~@/static/fonts/alegreya-v16-latin-regular.svg#Alegreya') format('svg'); /* Legacy iOS */
+	src: url('~$shared/fonts/alegreya-v16-latin-regular.eot'); /* IE9 Compat Modes */
+	src: local(''), url('~$shared/fonts/alegreya-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('~$shared/fonts/alegreya-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */ url('~$shared/fonts/alegreya-v16-latin-regular.woff') format('woff'), /* Modern Browsers */ url('~$shared/fonts/alegreya-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('~$shared/fonts/alegreya-v16-latin-regular.svg#Alegreya') format('svg'); /* Legacy iOS */
 }
 :root {
 	--transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -226,10 +226,10 @@ body {
 			right: 0;
 			padding-top: 56.25%;
 			z-index: -1;
-			background-image: linear-gradient(to top, $shark, transparent), url('~@/static/me.jpg?resize&size=480&format=webp');
+			background-image: linear-gradient(to top, $shark, transparent), url('~$shared/cat.jpg?resize&size=480&format=webp');
 			background-size: cover;
 			@include media('retina2x') {
-				background-image: linear-gradient(to top, $shark, transparent), url('~@/static/me.jpg?resize&size=960&format=webp');
+				background-image: linear-gradient(to top, $shark, transparent), url('~$shared/cat.jpg?resize&size=960&format=webp');
 			}
 			@include media('>=tablet') {
 				display: none;
@@ -264,12 +264,12 @@ body {
 			width: 50%;
 			height: 100vh;
 			transition: var(--transition);
-			background-image: linear-gradient(to left, $shark, transparent), url('~@/static/me.jpg?resize&size=600&format=webp');
+			background-image: linear-gradient(to left, $shark, transparent), url('~$shared/cat.jpg?resize&size=600&format=webp');
 			background-size: cover;
 			background-position: top right;
 			background-repeat: no-repeat;
 			@include media('retina2x') {
-				background-image: linear-gradient(to left, $shark, transparent), url('~@/static/me.jpg?resize&size=1200&format=webp');
+				background-image: linear-gradient(to left, $shark, transparent), url('~$shared/cat.jpg?resize&size=1200&format=webp');
 			}
 			z-index: -1;
 		}

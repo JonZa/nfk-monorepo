@@ -49,9 +49,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/variables.scss';
-@import '@/assets/mixins.scss';
-@import '@/assets/include-media.scss';
+@import '~$shared/sass/shared/variables.scss';
+@import '~$shared/sass/shared/mixins.scss';
+@import '~$shared/sass/shared/include-media.scss';
 .nav {
 	&__container {
 		@include media('<tablet') {

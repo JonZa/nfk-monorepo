@@ -13,7 +13,7 @@
 export default {
 	data() {
 		return {
-			picture: require('~$shared/cat.jpg?resize&size=480&format=webp')
+			picture: require('$shared/cat.jpg?resize&size=200&format=webp')
 		};
 	}
 };
