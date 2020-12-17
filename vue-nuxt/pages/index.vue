@@ -10,10 +10,12 @@
 </template>
 
 <script>
+import catImage from '$shared/cat.jpg?resize&size=480&format=webp';
+
 export default {
 	data() {
 		return {
-			picture: require('~$shared/cat.jpg?resize&size=480&format=webp')
+			picture: catImage
 		};
 	}
 };
