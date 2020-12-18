@@ -17,6 +17,13 @@ export default {
 		 */
 		extend(config, { isDev }) {
 			config.resolve.alias['$shared'] = path.join(__dirname, '../shared');
+			config.module.rules.push({
+			  test: /\.(pdf)$/i,
+			  loader: 'file-loader',
+			  options: {
+				name: '[path][name].[ext]'
+			  }
+			})
 		}
 	},
 	router: {

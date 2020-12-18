@@ -226,10 +226,10 @@ body {
 			right: 0;
 			padding-top: 56.25%;
 			z-index: -1;
-			background-image: linear-gradient(to top, $shark, transparent), url('~$shared/cat.jpg?resize&size=480&format=webp');
+			background-image: linear-gradient(to top, $shark, transparent), url('~$shared/images/me.jpg?resize&size=480&format=webp');
 			background-size: cover;
 			@include media('retina2x') {
-				background-image: linear-gradient(to top, $shark, transparent), url('~$shared/cat.jpg?resize&size=960&format=webp');
+				background-image: linear-gradient(to top, $shark, transparent), url('~$shared/images/me.jpg?resize&size=960&format=webp');
 			}
 			@include media('>=tablet') {
 				display: none;
@@ -264,12 +264,12 @@ body {
 			width: 50%;
 			height: 100vh;
 			transition: var(--transition);
-			background-image: linear-gradient(to left, $shark, transparent), url('~$shared/cat.jpg?resize&size=600&format=webp');
+			background-image: linear-gradient(to left, $shark, transparent), url('~$shared/images/me.jpg?resize&size=600&format=webp');
 			background-size: cover;
 			background-position: top right;
 			background-repeat: no-repeat;
 			@include media('retina2x') {
-				background-image: linear-gradient(to left, $shark, transparent), url('~$shared/cat.jpg?resize&size=1200&format=webp');
+				background-image: linear-gradient(to left, $shark, transparent), url('~$shared/images/me.jpg?resize&size=1200&format=webp');
 			}
 			z-index: -1;
 		}
