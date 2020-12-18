@@ -4,7 +4,7 @@
 			Contact me
 		</h1>
 		<p>You can email me at <a href="mailto:jon.muller@gmail.com">jon.muller@gmail.com</a> or give me a call me on <a href="tel:0466213376">0466&nbsp;213&nbsp;376</a>.</p>
-		<form name="contact" method="POST" data-netlify="true" @submit.prevent="handleSubmit">
+		<form name="contact" method="POST">
 			<input type="hidden" name="form-name" value="contact" />
 			<label>Your Name: <input type="text" name="name"/></label>
 			<label>Your Email: <input type="email" name="email"/></label>
