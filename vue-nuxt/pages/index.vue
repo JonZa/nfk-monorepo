@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1 title="I'm Jon Muller">I'm Jon Muller</h1>
+		<h1>I'm Jon Muller</h1>
 		<p>
 			I've been building user interfaces<br class="soft" />
 			for over 20 years.

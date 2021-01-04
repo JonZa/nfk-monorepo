@@ -87,11 +87,45 @@ export default {
 	margin: 0;
 	padding: 0;
 }
-html {
+html,
+input,
+button,
+textarea {
 	font-family: 'Alegreya', serif;
 	font-size: 100%;
-	word-spacing: 1px;
-	box-sizing: border-box;
+}
+input,
+button,
+textarea {
+	font-family: 'Alegreya', serif;
+	font-size: 100%;
+	box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.75), inset -1px -1px 2px rgba(255, 255, 255, 0.75);
+	background: linear-gradient(to top, lighten($shark, 66%), #fff 66%);
+	background-size: 100% 100%;
+	transition: var(--transition);
+	color: $shark;
+	display: block;
+	width: 75%;
+	border: 0;
+	border-radius: 4px;
+}
+input,
+textarea {
+	margin-top: 5px;
+	padding: 10px;
+	font-size: 1rem;
+}
+label {
+	display: block;
+	margin-bottom: 20px;
+}
+button {
+	font-size: 1.25rem;
+	padding: 10px 20px;
+	&:hover {
+		color: darken($carnation, 50%);
+		background-size: 100% 200%;
+	}
 }
 h1 {
 	font-family: 'Nunito';

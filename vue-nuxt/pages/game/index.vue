@@ -168,23 +168,14 @@ $this: '.zwipe';
 		margin: 0;
 	}
 	&__shuffle {
-		border: 0;
-		box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.75), inset -1px -1px 2px rgba(255, 255, 255, 0.75);
-		text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.75);
-		color: $shark;
 		font-size: 1.5rem;
 		left: 50%;
 		top: 50%;
 		z-index: 2;
 		padding: 10px 20px;
-		border-radius: 4px;
 		z-index: 2;
 		position: absolute;
 		transform: translate(-50%, -50%);
-		background: linear-gradient(to top, lighten($shark, 50%), #fff 66%);
 	}
-}
-button {
-	display: block;
 }
 </style>

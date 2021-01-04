@@ -49,7 +49,12 @@ export default {
 	transform: translate(calc(calc(var(--square) / var(--columns)) * var(--currentColumn)), calc(calc(var(--square) / var(--columns)) * var(--currentRow)));
 	transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 	background-image: url('~$shared/images/banksy.jpg?resize&size=320&format=webp');
-	background-size: calc(var(--square));
+	&,
+	&:active,
+	&:focus,
+	&:hover {
+		background-size: calc(var(--square));
+	}
 	@include media('retina2x') {
 		background-image: url('~$shared/images/banksy.jpg?resize&size=640&format=webp');
 	}
