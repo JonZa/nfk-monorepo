@@ -20,6 +20,7 @@ export default {
 	data() {
 		return {
 			formValues: {
+				'form-name': 'contact',
 				name: 'Jon',
 				email: 'jon.muller@gmail.com',
 				message: ''
@@ -40,7 +41,7 @@ export default {
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 				body: new URLSearchParams(this.encode(this.formValues)).toString()
 			})
-				.then(() => this.$router.push('thanks'))
+				.then(() => this.$router.push('../thanks'))
 				.catch(error => console.log(error));
 		}
 	}
