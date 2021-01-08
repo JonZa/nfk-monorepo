@@ -1,0 +1,53 @@
+@import 'sassy/variables';
+@import 'sassy/mixins';
+@import 'sassy/include-media';
+@import 'shared/button';
+@import 'shared/document';
+@import 'shared/elements';
+@import 'shared/fonts';
+@import 'shared/layout';
+@import 'shared/page';
+@import 'pages/experience';
+@import 'pages/game';
+@import 'pages/home';
+@import 'components/nav';
+@import 'components/quote';
+@import 'components/tile';
+
+.list {
+	&--plain {
+		list-style-type: none;
+	}
+}
+
+.icon {
+	&--big {
+		height: 54px;
+		@at-root .columns--icons & {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	&--inline {
+		height: 18px;
+		transform: translatey(3px);
+		margin-right: 5px;
+	}
+	path {
+		fill: #fff;
+	}
+}
+
+.columns {
+	display: flex;
+	.child {
+		flex: 1 1 50%;
+	}
+	&--icons {
+		.child {
+			position: relative;
+			padding-left: 80px;
+		}
+	}
+}

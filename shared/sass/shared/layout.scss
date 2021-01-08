@@ -1,0 +1,102 @@
+.container {
+	@include media('<tablet') {
+		margin: 100px auto 50px auto;
+		width: calc(100% - 40px);
+		&::after,
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			padding-top: 56.25%;
+			z-index: -1;
+			background-image: linear-gradient(to top, $shark, transparent), url('~$shared/images/me.jpg?resize&size=480&format=webp');
+			background-size: cover;
+			@include media('retina2x') {
+				background-image: linear-gradient(to top, $shark, transparent), url('~$shared/images/me.jpg?resize&size=960&format=webp');
+			}
+			@include media('>=tablet') {
+				display: none;
+			}
+		}
+		&::after {
+			filter: hue-rotate(90deg);
+			clip: rect(0, 0, 0, 0);
+			opacity: 0;
+			transition: var(--transition);
+		}
+		&--nav-is-open::after {
+			opacity: 1;
+			left: -10px;
+			animation: glitch-anim 5s linear infinite alternate;
+		}
+	}
+	@include media('height<phoneHeight') {
+		margin-top: 50px;
+	}
+	@include media('>=tablet') {
+		position: relative;
+		&::before,
+		&::after {
+			display: block;
+			content: '';
+			position: fixed;
+		}
+		&::before {
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 100vh;
+			transition: var(--transition);
+			background-image: linear-gradient(to left, $shark, transparent), url('~$shared/images/me.jpg?resize&size=600&format=webp');
+			background-size: cover;
+			background-position: top right;
+			background-repeat: no-repeat;
+			@include media('retina2x') {
+				background-image: linear-gradient(to left, $shark, transparent), url('~$shared/images/me.jpg?resize&size=1200&format=webp');
+			}
+			z-index: -1;
+		}
+		&::after {
+			left: 50%;
+			width: 50%;
+			max-width: 640px;
+			z-index: 1;
+			bottom: 0;
+			height: 50px;
+			background: linear-gradient(to bottom, transparent, $shark 45px, #ff99cc 45px);
+		}
+	}
+}
+.content {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 600px;
+	min-width: 320px;
+	@include media('>=tablet') {
+		width: 50%;
+		max-width: 620px;
+		margin-left: 50%;
+		padding: 100px 20px 50px 10px;
+		order: 2;
+	}
+	transition: var(--transition);
+	@include media('<tablet') {
+		@at-root .container--nav-is-open & {
+			opacity: 0.25;
+			filter: blur(1px);
+		}
+	}
+	#{$a-tags} {
+		color: $carnation;
+		box-shadow: inset 0 -1px 0 $carnation;
+		text-decoration: none;
+		transition: var(--transition);
+	}
+	#{$a-tags-hover} {
+		color: #fff;
+		box-shadow: inset 0 -1px 0 #fff;
+	}
+}

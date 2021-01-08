@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "next": "^10.0.0",
+    "next-optimized-images": "^2.6.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "responsive-loader": "^2.3.0",
+    "sass": "^1.32.0",
+    "sharp": "^0.27.0"
   }
 }

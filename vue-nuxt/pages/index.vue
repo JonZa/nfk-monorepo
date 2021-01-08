@@ -27,14 +27,3 @@
 		</p>
 	</div>
 </template>
-
-<style lang="scss">
-@import '~$shared/sass/shared//variables.scss';
-@import '~$shared/sass/shared//mixins.scss';
-@import '~$shared/sass/shared//include-media.scss';
-br.soft {
-	@include media('>=tablet') {
-		display: none;
-	}
-}
-</style>

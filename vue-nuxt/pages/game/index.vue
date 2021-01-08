@@ -26,7 +26,7 @@
 					}"
 				/>
 			</template>
-			<button v-on:click="start" v-if="!started" class="zwipe__shuffle">Shuffle to Start</button>
+			<button v-on:click="start" v-if="!started" class="button zwipe__shuffle">Shuffle to Start</button>
 		</div>
 	</div>
 </template>
@@ -147,35 +147,3 @@ export default {
 	}
 };
 </script>
-
-<style lang="scss">
-@import '~$shared/sass/shared/variables.scss';
-@import '~$shared/sass/shared/mixins.scss';
-@import '~$shared/sass/shared/include-media.scss';
-$this: '.zwipe';
-#{$this} {
-	--square: 320px;
-	width: var(--square);
-	height: var(--square);
-	margin: 0 auto;
-	position: relative;
-	@include media('>=tablet') {
-		--square: 480px;
-		margin: 0;
-	}
-	@include media('>=desktop') {
-		--square: 560px;
-		margin: 0;
-	}
-	&__shuffle {
-		font-size: 1.5rem;
-		left: 50%;
-		top: 50%;
-		z-index: 2;
-		padding: 10px 20px;
-		z-index: 2;
-		position: absolute;
-		transform: translate(-50%, -50%);
-	}
-}
-</style>

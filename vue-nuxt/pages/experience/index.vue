@@ -100,16 +100,3 @@
 		<p>Meanwhile I was an <strong>HTML email designer/developer</strong> at WorldWideTender, a <strong>designer/Flash developer</strong> at Electric Ocean, and a <strong>designer/developer</strong> at Fusion Interactive.</p>
 	</div>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style lang="scss">
-.experience {
-	&__company {
-		float: right;
-		margin: 2px 0 15px 15px;
-	}
-}
-</style>

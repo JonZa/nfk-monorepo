@@ -1,0 +1,33 @@
+
+.button {
+	font-family: 'Nunito';
+	font-size: 1.25rem;
+	padding: 10px 20px;
+	color: $shark;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: var(--transition);
+	position: relative;
+	background-image: linear-gradient(315deg, $carnation 0%, #fff 33%, #fff 67%, $carnation);
+	border: none;
+	z-index: 1;
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		border-radius: 5px;
+		background-image: linear-gradient(315deg, $carnation 0%, rgba(darken($carnation, 7.5%), 1) 50%, $carnation);
+		transition: var(--transition);
+	}
+	&:hover {
+		color: #fff;
+	}
+	&:hover:after {
+		top: 0;
+		height: 100%;
+	}
+}

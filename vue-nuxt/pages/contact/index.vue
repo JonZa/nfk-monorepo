@@ -8,8 +8,8 @@
 			<input type="hidden" name="form-name" value="contact" />
 			<label>Name: <input type="text" v-model="formValues.name" name="name"/></label>
 			<label>Email: <input type="email" v-model="formValues.email" name="email"/></label>
-			<label>Message: <textarea name="message" v-model="formValues.message" rows="3"></textarea></label>
-			<button type="submit">Send</button>
+			<label>How can I help? <textarea name="message" v-model="formValues.message" rows="3"></textarea></label>
+			<button class="button" type="submit">Send</button>
 		</form>
 		<div id="potato"></div>
 	</div>
@@ -20,9 +20,9 @@ export default {
 	data() {
 		return {
 			formValues: {
-				'form-name': 'contact',
-				name: 'Jon',
-				email: 'jon.muller@gmail.com',
+				'form-name': '',
+				name: '',
+				email: '',
 				message: ''
 			}
 		};
