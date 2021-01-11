@@ -5,6 +5,7 @@ const Home = () => {
 	return (
 		<Layout>
 			<h1>I'm Jon Muller</h1>
+			<img src={require('$shared/cat.jpg?resize&size=114&format=webp')} />
 			<p>
 				I've been building user interfaces
 				<br className="soft" />

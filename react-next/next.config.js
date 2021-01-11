@@ -1,5 +1,8 @@
 const path = require('path');
-module.exports = {
+const withPlugins = require('next-compose-plugins');
+const optimizedImages = require('next-optimized-images');
+
+const nextConfig = {
 	basePath: '/react',
 	webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
 		config.resolve.alias['$shared'] = path.join(__dirname, '../shared');
@@ -13,3 +16,18 @@ module.exports = {
 		return config;
 	},
 };
+
+module.exports = withPlugins(
+	[
+		optimizedImages,
+		{
+			/* config for next-optimized-images */
+			optimizeImagesInDev: true,
+			handleImages: ['jpg'],
+			responsive: {
+				adapter: require('responsive-loader/sharp'),
+			},
+		},
+	],
+	nextConfig
+);
