@@ -4,6 +4,7 @@ const optimizedImages = require('next-optimized-images');
 
 const nextConfig = {
 	basePath: '/react',
+	assetPrefix: '/react',
 	webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
 		config.resolve.alias['$shared'] = path.join(__dirname, '../shared');
 		config.module.rules.push({
