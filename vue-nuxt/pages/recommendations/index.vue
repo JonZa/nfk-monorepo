@@ -1,5 +1,5 @@
 <template>
-	<div class="contact">
+	<div>
 		<h1>
 			Recommendations
 		</h1>
