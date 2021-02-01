@@ -1,14 +1,11 @@
-import Layout from '../components/layout';
 import Link from 'next/link';
 
 const Home = () => {
 	return (
-		<Layout>
+		<>
 			<h1>I'm Jon Muller</h1>
-			<img src={require('$shared/cat.jpg?resize&size=114&format=webp')} />
 			<p>
-				I've been building user interfaces
-				<br className="soft" />
+				I've been building user interfaces <br className="soft" />
 				for over 20 years.
 			</p>
 			<p>
@@ -27,8 +24,7 @@ const Home = () => {
 				by a teammate.
 			</p>
 			<p>
-				I'm in Sydney, Australia,
-				<br className="soft" />
+				I'm in Sydney, Australia, <br className="soft" />
 				and I'm looking for work.
 			</p>
 			<p>
@@ -37,14 +33,13 @@ const Home = () => {
 					download my resume
 				</a>
 				, <br className="soft" />
-				email me at <a href="mailto:jon.muller@gmail.com">jon.muller@gmail.com</a> <br className="soft" />
-				or{' '}
+				email me at <a href="mailto:jon.muller@gmail.com">jon.muller@gmail.com</a>,<br className="soft" /> or{' '}
 				<Link href="/about">
 					<a>read more about me</a>
 				</Link>
 				.
 			</p>
-		</Layout>
+		</>
 	);
 };
 

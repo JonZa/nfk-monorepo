@@ -1,35 +1,32 @@
-import Layout from '../../components/layout';
-
 const About = () => {
 	return (
-		<Layout>
-			<div className="about">
-				<h1>About me</h1>
-				<p>
-					<strong>I build interfaces:</strong>
-					<br />
-					the front end of the front-end.
-				</p>
-				<p>Yeah, Javascript is cool, but have you tried writing less code and getting better results?</p>
-				<p>
-					I love Javascript, but valuing HTML, mastering CSS, and <strong>understanding browsers</strong> means I spend less time writing slow, brittle, convoluted Javascript; more time writing lean, accessible, semantic HTML, and writing smooth, responsive, extensible CSS.
-				</p>
-				<h2>About this site</h2>
-				<p>
-					<strong>This site is currently under construction.</strong> The immediate to-do list:
-				</p>
-				<ul>
-					<li>Content; definitely needs some fleshing out</li>
-					<li>Local storage; save the game-state for later</li>
-				</ul>
-				<p>The medium-term to-do list:</p>
-				<ul>
-					<li>Dynamic content; there's a WordPress backend that's not ready for prime-time</li>
-					<li>React; the site is built in Vue, but I'd like to build an identical site in React</li>
-					<li>Storybook pattern library; currently the atomic design emperor has no clothes</li>
-				</ul>
-				<p>I've built the site you're browsing using Vue. I've also built the same site using React.</p>
-				{/* <div className="columns columns--icons">
+		<div className="about">
+			<h1>About me</h1>
+			<p>
+				<strong>I build interfaces:</strong>
+				<br />
+				the front end of the front-end.
+			</p>
+			<p>Yeah, Javascript is cool, but have you tried writing less code and getting better results?</p>
+			<p>
+				I love Javascript, but valuing HTML, mastering CSS, and <strong>understanding browsers</strong> means I spend less time writing slow, brittle, convoluted Javascript; more time writing lean, accessible, semantic HTML, and writing smooth, responsive, extensible CSS.
+			</p>
+			<h2>About this site</h2>
+			<p>
+				<strong>This site is currently under construction.</strong> The immediate to-do list:
+			</p>
+			<ul>
+				<li>Content; definitely needs some fleshing out</li>
+				<li>Local storage; save the game-state for later</li>
+			</ul>
+			<p>The medium-term to-do list:</p>
+			<ul>
+				<li>Dynamic content; there's a WordPress backend that's not ready for prime-time</li>
+				<li>React; the site is built in Vue, but I'd like to build an identical site in React</li>
+				<li>Storybook pattern library; currently the atomic design emperor has no clothes</li>
+			</ul>
+			<p>I've built the site you're browsing using Vue. I've also built the same site using React.</p>
+			{/* <div className="columns columns--icons">
 				<div className="child">
 					<svg className="icon--big" viewBox="0 0 261.76 226.69" xmlns="http://www.w3.org/2000/svg">
 						<path d="M161.096.001l-30.224 52.35L100.647.002H-.005L130.872 226.69 261.749 0z" fill="#41b883" />
@@ -83,8 +80,7 @@ const About = () => {
 			<p>
 				I'm using a headless WordPress CMS hosted on AWS, and content updates trigger a buildhook on Netlify that pulls the updated content and rebuilds a static site. Yay, JAMstack: better performance, higher security, easier scaling, more fun.
 			</p> */}
-			</div>
-		</Layout>
+		</div>
 	);
 };
 

@@ -1,10 +1,13 @@
 import { useContext } from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
-import Nav from '../components/nav';
 import Context from '../components/context';
+import Nav from '../components/nav';
+import Transition from '../components/transition';
 
-const Layout = (props) => {
+const Layout = ({ children }) => {
 	const { navIsOpen } = useContext(Context);
+	const router = useRouter();
 	return (
 		<div className="container" className={`container ${navIsOpen ? 'container--nav-is-open' : ''}`}>
 			<Head>
@@ -13,7 +16,7 @@ const Layout = (props) => {
 			</Head>
 			<Nav />
 			<div className="content">
-				{props.children}
+				<Transition location={router.pathname}>{children}</Transition>
 			</div>
 		</div>
 	);

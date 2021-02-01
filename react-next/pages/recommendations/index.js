@@ -1,4 +1,3 @@
-import Layout from '../../components/layout';
 import Quote from '../../components/quote';
 
 const Recommendations = () => {
@@ -132,15 +131,15 @@ const Recommendations = () => {
 		},
 	];
 	return (
-		<Layout>
-			<h1>Experience</h1>
+		<>
+			<h1>Recommendations</h1>
 			{quotes.map((quote, n) => (
 				<React.Fragment key={n}>
 					<Quote quote={quote} key={'quote-' + n} />
 					<hr key={'hr-' + n} />
 				</React.Fragment>
 			))}
-		</Layout>
+		</>
 	);
 };
 

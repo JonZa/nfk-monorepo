@@ -1,6 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import Context from '../components/context';
+import Layout from '../components/layout';
 import '../../shared/sass/styles.scss';
 
 export default class NfkSt extends App {
@@ -8,7 +9,6 @@ export default class NfkSt extends App {
 		navIsOpen: false,
 	};
 	hamburger = React.createRef();
-
 	toggleNavIsOpen = () => {
 		if (getComputedStyle(this.hamburger.current).display === 'block') {
 			this.setState({
@@ -20,13 +20,14 @@ export default class NfkSt extends App {
 			});
 		}
 	};
-
 	render() {
 		const { Component, pageProps } = this.props;
 
 		return (
 			<Context.Provider value={{ navIsOpen: this.state.navIsOpen, toggleNavIsOpen: this.toggleNavIsOpen, hamburger: this.hamburger }}>
-				<Component {...pageProps} />
+				<Layout>
+					<Component {...pageProps} />
+				</Layout>
 			</Context.Provider>
 		);
 	}

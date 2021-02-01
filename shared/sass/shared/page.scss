@@ -1,6 +1,11 @@
-
 .page-enter-active {
 	animation: pageAnimation 0.35s;
+	&--react {
+		animation-delay: 0.35s;
+		opacity: 0;
+		position: absolute;
+		width: calc(100% - 30px);
+	}
 }
 .page-leave-active {
 	animation: pageAnimation backwards 0.35s;

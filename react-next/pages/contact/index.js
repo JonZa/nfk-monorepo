@@ -1,8 +1,7 @@
-import Layout from '../../components/layout';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
-const Thanks = () => {
+const Contact = () => {
 	const router = useRouter();
 	const [formValues, setFormValues] = useState({});
 	const handleSubmit = (event) => {
@@ -16,7 +15,7 @@ const Thanks = () => {
 			.catch((error) => console.log(error));
 	};
 	return (
-		<Layout>
+		<>
 			<h1>Contact me</h1>
 			<p>
 				You can email me at <a href="mailto:jon.muller@gmail.com">jon.muller@gmail.com</a> or give me a call me on <a href="tel:0466213376">0466&nbsp;213&nbsp;376</a>.
@@ -37,8 +36,8 @@ const Thanks = () => {
 				</button>
 			</form>
 			<div id="potato"></div>
-		</Layout>
+		</>
 	);
 };
 
-export default Thanks;
+export default Contact;
