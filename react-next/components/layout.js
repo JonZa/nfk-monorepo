@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
 			<Head>
 				<title>Jon Muller | User interface developer</title>
 				<link rel="icon" type="image/x-icon" href="~$shared/images/heart.svg" />
+				<meta name="description" content="Yeah, Javascript is cool, but have you tried writing less code and getting better results?" />
 			</Head>
 			<Nav />
 			<div className="content">

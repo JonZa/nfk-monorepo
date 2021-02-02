@@ -27,3 +27,35 @@
 		</p>
 	</div>
 </template>
+
+<script>
+export default {
+	head() {
+		return {
+			htmlAttrs: {
+				lang: 'en'
+			},
+			title: 'Jon Muller | User interface developer',
+			meta: [
+				{
+					hid: 'viewport',
+					name: 'viewport',
+					content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0'
+				},
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'Yeah, Javascript is cool, but have you tried writing less code and getting better results?'
+				}
+			],
+			link: [
+				{
+					rel: 'icon',
+					type: 'image/x-icon',
+					href: require('$shared/images/heart.svg')
+				}
+			]
+		};
+	}
+};
+</script>
