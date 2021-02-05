@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
 		<div className="container" className={`container ${navIsOpen ? 'container--nav-is-open' : ''}`}>
 			<Head>
 				<title>Jon Muller | User interface developer</title>
-				<link rel="icon" type="image/x-icon" href="~$shared/images/heart.svg" />
+				<link rel="icon" type="image/x-icon" href={require('$shared/images/heart.svg')} />
 				<meta name="description" content="Yeah, Javascript is cool, but have you tried writing less code and getting better results?" />
 			</Head>
 			<Nav />
